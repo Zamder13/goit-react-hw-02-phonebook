@@ -17,7 +17,6 @@ class App extends Component {
   };
 
   formSubmit = (newContactSubmit) => {
-    console.log(newContactSubmit, "this is it");
     this.setContact(newContactSubmit);
   };
 
