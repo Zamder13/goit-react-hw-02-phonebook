@@ -22,11 +22,6 @@ class App extends Component {
 
   setContact = async (text) => {
     const { contacts } = this.state;
-    const contact = {
-      id: nanoid(),
-      name: text.name,
-      number: text.number,
-    };
 
     if (
       contacts.find(
@@ -35,6 +30,11 @@ class App extends Component {
     ) {
       alert(`${text.name} is already in contacts.`);
     } else {
+      const contact = {
+        id: nanoid(),
+        name: text.name,
+        number: text.number,
+      };
       this.setState(({ contacts }) => ({
         contacts: [contact, ...contacts],
       }));
